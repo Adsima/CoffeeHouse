@@ -23,7 +23,7 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
-    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/event_data.sql" connection-id="virtual-postgres-connection" session-id="" current-schema="" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/event_data.sql" connection-id="ef3ef32d-9257-4b03-86c5-19388b3abc51" session-id="MAIN" current-schema="postgres" />
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/event_project.sql" connection-id="ef3ef32d-9257-4b03-86c5-19388b3abc51" session-id="MAIN" current-schema="postgres" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">

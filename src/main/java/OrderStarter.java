@@ -1,6 +1,4 @@
 import model.Order;
-import model.event.OrderEvent;
-import model.event.OrderRegisteredEvent;
 
 public class OrderStarter {
     public static void main(String[] args) {

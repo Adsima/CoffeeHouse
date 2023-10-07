@@ -1,6 +1,7 @@
 package model.event;
 
-import model.status.OrderStatus;
+import model.Order;
+import model.status.EventType;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -11,9 +12,9 @@ public class OrderRegisteredEvent extends OrderEvent {
     private Long productId;
     private BigDecimal productCost;
 
-    public OrderRegisteredEvent(Long orderId, Long employeeId, OrderStatus status, LocalDateTime time, Long clientId,
+    public OrderRegisteredEvent(Order order, Long employeeId, EventType type, LocalDateTime time, Long clientId,
                                 LocalDateTime executedTime, Long productId, BigDecimal productCost) {
-        super(orderId, employeeId, status, time);
+        super(order, employeeId, type, time);
         this.clientId = clientId;
         this.executedTime = executedTime;
         this.productId = productId;

@@ -2,7 +2,6 @@ package model.event;
 
 import model.Order;
 import model.status.EventType;
-import model.status.OrderStatus;
 
 import java.time.LocalDateTime;
 

@@ -1,11 +1,12 @@
 package model.event;
 
-import model.status.OrderStatus;
+import model.Order;
+import model.status.EventType;
 
 import java.time.LocalDateTime;
 
 public class OrderReadyEvent extends OrderEvent {
-    public OrderReadyEvent(Long orderId, Long employeeId, OrderStatus status, LocalDateTime time) {
-        super(orderId, employeeId, status, time);
+    public OrderReadyEvent(Order order, Long employeeId, EventType type, LocalDateTime time) {
+        super(order, employeeId, type, time);
     }
 }
