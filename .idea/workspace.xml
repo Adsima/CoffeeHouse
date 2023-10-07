@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5d6b435-859a-4232-affe-4c8b6cc37fcf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/event/OrderCancelledEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/event/OrderCancelledEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/event/OrderCompletedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/event/OrderCompletedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/event/OrderEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/event/OrderEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/event/OrderReadyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/event/OrderReadyEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/event/OrderRegisteredEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/event/OrderRegisteredEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/event/OrderStartedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/event/OrderStartedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/PropertiesUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/PropertiesUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/event_project.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>

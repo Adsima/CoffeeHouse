@@ -1,5 +1,7 @@
 package domain;
 
+import domain.event.OrderEvent;
+
 import java.util.List;
 
 public class Order {
