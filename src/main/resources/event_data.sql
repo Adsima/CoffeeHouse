@@ -1,14 +1,16 @@
+CREATE DATABASE IF NOT EXISTS coffee_house;
+
 DROP TABLE IF EXISTS ch_events;
 
 CREATE TABLE ch_events (
     event_id SERIAL PRIMARY KEY,
-    employee_id INT NOT NULL,
+    order_id INT NOT NULL,
     client_id INT,
+    employee_id INT NOT NULL,
+    expected_time TIME,
     product_id INT,
     product_cost INT,
-    expected_time TIME,
     reason VARCHAR(128),
     event_type VARCHAR(50),
-    order_id INT NOT NULL,
-    time TIMESTAMP NOT NULL
+    date_time TIMESTAMP NOT NULL
 );

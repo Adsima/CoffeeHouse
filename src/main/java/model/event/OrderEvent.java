@@ -1,29 +1,32 @@
-package domain.event;
+package model.event;
 
-import domain.OrderStatus;
+import model.Order;
+import model.status.EventType;
+import model.status.OrderStatus;
 
 import java.time.LocalDateTime;
 
 public abstract class OrderEvent {
-    private Long orderId;
+    private Order order;
     private Long employeeId;
+    private EventType type;
     private LocalDateTime time;
-    private OrderStatus status;
 
     public OrderEvent() {}
 
-    public OrderEvent(Long orderId, Long employeeId, LocalDateTime time, OrderStatus status) {
-        this.orderId = orderId;
+    public OrderEvent(Order order, Long employeeId, EventType type, LocalDateTime time) {
+        this.order = order;
         this.employeeId = employeeId;
+        this.type = type;
         this.time = time;
     }
 
-    public Long getOrderId() {
-        return orderId;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     public Long getEmployeeId() {
@@ -32,6 +35,14 @@ public abstract class OrderEvent {
 
     public void setEmployeeId(Long employeeId) {
         this.employeeId = employeeId;
+    }
+
+    public EventType getType() {
+        return type;
+    }
+
+    public void setType(EventType type) {
+        this.type = type;
     }
 
     public LocalDateTime getTime() {
@@ -44,9 +55,10 @@ public abstract class OrderEvent {
 
     @Override
     public String toString() {
-        return "Event{" +
-                "orderId=" + orderId +
+        return "OrderEvent{" +
+                "order=" + order +
                 ", employeeId=" + employeeId +
+                ", type=" + type +
                 ", time=" + time +
                 '}';
     }

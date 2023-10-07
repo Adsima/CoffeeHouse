@@ -1,14 +1,16 @@
-package domain.event;
+package model.event;
 
-import domain.OrderStatus;
+import model.Order;
+import model.status.EventType;
+import model.status.OrderStatus;
 
 import java.time.LocalDateTime;
 
 public class OrderCancelledEvent extends OrderEvent {
     private String reason;
 
-    public OrderCancelledEvent(Long orderId, Long employeeId, LocalDateTime time, String reason, OrderStatus status) {
-        super(orderId, employeeId, time, status);
+    public OrderCancelledEvent(Order order, Long employeeId, EventType type, LocalDateTime time, String reason) {
+        super(order, employeeId, type, time);
         this.reason = reason;
     }
 

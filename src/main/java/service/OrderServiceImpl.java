@@ -1,18 +1,14 @@
 package service;
 
-import domain.Order;
-import domain.event.OrderEvent;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import model.Order;
+import model.event.OrderEvent;
 
 public class OrderServiceImpl implements OrderService {
-    Map<Long, Order> orderMap;
 
-    public OrderServiceImpl() {
-        orderMap = new HashMap<>();
+    private Order order;
+
+    public OrderServiceImpl(Order order) {
+        this.order = order;
     }
 
     @Override
@@ -22,9 +18,6 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order findOrder(int id) {
-        if (!orderMap.containsKey(id)) {
-            throw new IllegalArgumentException("Заказ не найден!");
-        }
-        return orderMap.get(id);
+        throw new IllegalArgumentException();
     }
 }

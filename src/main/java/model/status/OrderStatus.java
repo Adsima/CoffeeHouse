@@ -1,9 +1,9 @@
-package domain;
+package model.status;
 
 public enum OrderStatus {
     ORDER_REGISTERED,
     ORDER_CANCELLED,
     ORDER_STARTED,
     ORDER_READY,
-    ORDER_COMPLETED
+    ORDER_COMPLETED;
 }

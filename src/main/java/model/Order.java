@@ -1,6 +1,7 @@
-package domain;
+package model;
 
-import domain.event.OrderEvent;
+import model.event.OrderEvent;
+import model.status.OrderStatus;
 
 import java.util.List;
 
@@ -8,6 +9,9 @@ public class Order {
     private Long orderId;
     private OrderStatus status;
     private List<OrderEvent> eventList;
+
+    public Order() {
+    }
 
     public Order(Long orderId, OrderStatus status, List<OrderEvent> eventList) {
         this.orderId = orderId;
