@@ -1,15 +1,18 @@
 package domain.event;
 
+import domain.OrderStatus;
+
 import java.time.LocalDateTime;
 
 public abstract class OrderEvent {
     private Long orderId;
     private Long employeeId;
     private LocalDateTime time;
+    private OrderStatus status;
 
     public OrderEvent() {}
 
-    public OrderEvent(Long orderId, Long employeeId, LocalDateTime time) {
+    public OrderEvent(Long orderId, Long employeeId, LocalDateTime time, OrderStatus status) {
         this.orderId = orderId;
         this.employeeId = employeeId;
         this.time = time;
