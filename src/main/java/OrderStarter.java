@@ -1,3 +1,4 @@
+import dao.ConnectionManager;
 import dao.EventDao;
 import dao.OrderDao;
 import model.Order;
@@ -7,22 +8,24 @@ public class OrderStarter {
 
     private Order order;
     private OrderDao orderDao;
-    private EventDao eventDao;
 
     private OrderServiceImpl orderService;
 
 
     public OrderStarter() {
         orderDao = OrderDao.getInstance();
-        eventDao = EventDao.getInstance();
 
         orderService = new OrderServiceImpl();
 
     }
 
     public static void main(String[] args) {
-        new OrderStarter()
-                .start();
+        try {
+            new OrderStarter()
+                    .start();
+        } finally {
+            ConnectionManager.closePoll();
+        }
     }
 
     private void start() {

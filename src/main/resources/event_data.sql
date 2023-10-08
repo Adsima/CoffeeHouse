@@ -16,9 +16,4 @@ CREATE TABLE ch_events (
     date_time TIMESTAMP NOT NULL
 );
 
-CREATE TABLE ch_orders (
-    id BIGSERIAL PRIMARY KEY,
-    order_status VARCHAR(50) NOT NULL,
-    order_time TIMESTAMP NOT NULL
-);
 

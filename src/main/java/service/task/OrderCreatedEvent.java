@@ -9,7 +9,7 @@ import model.status.OrderStatus;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class EventTask {
+public class OrderCreatedEvent {
 
     private OrderRegisteredEvent registeredEvent;
     private OrderCancelledEvent cancelledEvent;
@@ -17,7 +17,7 @@ public class EventTask {
     private OrderReadyEvent readyEvent;
     private OrderCompletedEvent completedEvent;
 
-    public EventTask() {
+    public OrderCreatedEvent() {
     }
 
     public OrderRegisteredEvent createRegisteredEvent(Order order, Long employeeId, EventType type,
@@ -27,33 +27,37 @@ public class EventTask {
                 executedTime, productId, productCost);
     }
 
-    public void createCancelledEvent(Order order) {
+    public OrderCancelledEvent createCancelledEvent(Order order, Long employeeId, EventType type,
+                                                    LocalDateTime time, String reason) {
         if (validateRegistered(order) && checkingForEventCreation(order)) {
-            System.out.println("TRUE");
+
+            return new OrderCancelledEvent(order, employeeId, type, time, reason);
         }
-        throw new OrderException();
+        throw new OrderException("Order error!");
     }
 
-    public OrderStartedEvent createStartedEvent(Order order) {
+    public OrderStartedEvent createStartedEvent(Order order, Long employeeId, EventType type, LocalDateTime time) {
         if (validateRegistered(order) && checkingForEventCreation(order)) {
 
-            return startedEvent;
+            return new OrderStartedEvent(order, employeeId, type, time);
         }
-        throw new OrderException();
+        throw new OrderException("Order error!");
     }
 
-    public void createReadyEvent(Order order) {
+    public OrderReadyEvent createReadyEvent(Order order, Long employeeId, EventType type, LocalDateTime time) {
         if (validateRegistered(order) && checkingForEventCreation(order)) {
 
+            return new OrderReadyEvent(order, employeeId, type, time);
         }
-        throw new OrderException("The order is not registered!");
+        throw new OrderException("Order error!");
     }
 
-    public void createCompletedEvent(Order order) {
+    public OrderStartedEvent createCompletedEvent(Order order, Long employeeId, EventType type, LocalDateTime time) {
         if (validateRegistered(order) && checkingForEventCreation(order)) {
 
+            return new OrderStartedEvent(order, employeeId, type, time);
         }
-        throw new OrderException("The order is not registered!");
+        throw new OrderException("Order error!");
     }
 
     private boolean validateRegistered(Order order) {
