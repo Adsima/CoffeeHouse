@@ -11,10 +11,9 @@ import java.time.LocalDateTime;
 
 public final class OrderCreatedEvent {
 
-    public OrderCreatedEvent() {
-    }
+    public OrderCreatedEvent() {}
 
-    public static OrderRegisteredEvent createRegisteredEvent(Order order, Long employeeId, EventType type,
+    public OrderRegisteredEvent createRegisteredEvent(Order order, Long employeeId, EventType type,
                                       LocalDateTime time, Long clientId, LocalDateTime executedTime,
                                       Long productId, BigDecimal productCost) {
         order.setStatus(OrderStatus.ORDER_REGISTERED);
@@ -22,7 +21,7 @@ public final class OrderCreatedEvent {
                 executedTime, productId, productCost);
     }
 
-    public static OrderCancelledEvent createCancelledEvent(Order order, Long employeeId, EventType type,
+    public OrderCancelledEvent createCancelledEvent(Order order, Long employeeId, EventType type,
                                                     LocalDateTime time, String reason) {
         if (validateRegistered(order) && checkingForEventCreation(order)) {
             order.setStatus(OrderStatus.ORDER_CANCELLED);
@@ -31,7 +30,7 @@ public final class OrderCreatedEvent {
         throw new OrderException("Order error!");
     }
 
-    public static OrderStartedEvent createStartedEvent(Order order, Long employeeId,
+    public OrderStartedEvent createStartedEvent(Order order, Long employeeId,
                                                        EventType type, LocalDateTime time) {
         if (validateRegistered(order) && checkingForEventCreation(order)) {
             order.setStatus(OrderStatus.ORDER_STARTED);
@@ -40,7 +39,7 @@ public final class OrderCreatedEvent {
         throw new OrderException("Order error!");
     }
 
-    public static OrderReadyEvent createReadyEvent(Order order, Long employeeId,
+    public OrderReadyEvent createReadyEvent(Order order, Long employeeId,
                                                    EventType type, LocalDateTime time) {
         if (validateRegistered(order) && checkingForEventCreation(order)) {
             order.setStatus(OrderStatus.ORDER_READY);
@@ -49,20 +48,20 @@ public final class OrderCreatedEvent {
         throw new OrderException("Order error!");
     }
 
-    public static OrderStartedEvent createCompletedEvent(Order order, Long employeeId,
+    public OrderCompletedEvent createCompletedEvent(Order order, Long employeeId,
                                                          EventType type, LocalDateTime time) {
         if (validateRegistered(order) && checkingForEventCreation(order)) {
             order.setStatus(OrderStatus.ORDER_COMPLETED);
-            return new OrderStartedEvent(order, employeeId, type, time);
+            return new OrderCompletedEvent(order, employeeId, type, time);
         }
         throw new OrderException("Order error!");
     }
 
-    private static boolean validateRegistered(Order order) {
+    private boolean validateRegistered(Order order) {
         return order.getStatus().equals(OrderStatus.ORDER_REGISTERED);
     }
 
-    private static boolean checkingForEventCreation(Order order) {
+    private boolean checkingForEventCreation(Order order) {
         return !order.getStatus().equals(OrderStatus.ORDER_CANCELLED)
                 && !order.getStatus().equals(OrderStatus.ORDER_COMPLETED);
     }

@@ -1,6 +1,5 @@
 package service;
 
-import dao.OrderDao;
 import model.Order;
 import model.event.OrderEvent;
 import util.MessageConstants;
@@ -11,12 +10,13 @@ import java.util.Map;
 public class OrderServiceImpl implements OrderService {
     private Map<Long, Order> orderMap = new HashMap<>();
 
-    public OrderServiceImpl() {
-    }
+    public OrderServiceImpl() {}
 
     @Override
     public void publishEvent(OrderEvent event) {
-
+        for (Long aLong : orderMap.keySet()) {
+            
+        }
     }
 
     @Override

@@ -1,7 +1,6 @@
 CREATE DATABASE IF NOT EXISTS coffee_house;
 
 DROP TABLE IF EXISTS ch_events;
-DROP TABLE IF EXISTS ch_orders;
 
 CREATE TABLE ch_events (
     id BIGSERIAL PRIMARY KEY,
