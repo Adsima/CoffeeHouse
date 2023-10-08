@@ -14,10 +14,6 @@ public final class PropertiesUtil {
         loadProperties();
     }
 
-    public static String get(String key) {
-        return PROPERTIES.getProperty(key);
-    }
-
     private static void loadProperties() {
         try(var inputStream = PropertiesUtil.class.getClassLoader()
                 .getResourceAsStream("application.properties")) {
@@ -27,5 +23,9 @@ public final class PropertiesUtil {
         } catch (IOException e) {
             throw new PropertiesException(e);
         }
+    }
+
+    public static String get(String key) {
+        return PROPERTIES.getProperty(key);
     }
 }

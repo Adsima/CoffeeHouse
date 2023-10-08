@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d6b435-859a-4232-affe-4c8b6cc37fcf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="b5d6b435-859a-4232-affe-4c8b6cc37fcf" name="Changes" comment="Garbage cleaning">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OrderStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrderStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderCancelledEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderCancelledEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderCompletedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderCompletedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderReadyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderReadyEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderRegisteredEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderRegisteredEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderStartedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderStartedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/status/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/status/OrderStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/PropertiesUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/PropertiesUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/event_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/event_data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/event_project.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/event_project.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +81,14 @@
       <option name="presentableId" value="Default" />
       <updated>1696518814697</updated>
     </task>
+    <task id="LOCAL-00001" summary="Garbage cleaning">
+      <created>1696697998274</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696697998274</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,5 +101,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Garbage cleaning" />
+    <option name="LAST_COMMIT_MESSAGE" value="Garbage cleaning" />
   </component>
 </project>
