@@ -1,17 +1,18 @@
 package service;
 
+import dao.OrderDao;
 import model.Order;
 import model.event.OrderEvent;
 import util.MessageConstants;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class OrderServiceImpl implements OrderService {
 
-    private Map<Long, Order> orderMap;
+    private Map<Long, Order> orderMap = new HashMap<>();
 
-    public OrderServiceImpl(Map<Long, Order> orderMap) {
-        this.orderMap = orderMap;
+    public OrderServiceImpl() {
     }
 
     // Список событий будем искать ч/з id - HashMap<Long, List<EventOrder> ordersMap...
@@ -30,4 +31,9 @@ public class OrderServiceImpl implements OrderService {
         }
         return orderMap.get(id);
     }
+
+    public void addOrderToMap(Order order) {
+        orderMap.put(order.getOrderId(), order);
+    }
+
 }

@@ -7,25 +7,23 @@ import model.status.OrderStatus;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
 
     private Long orderId;
     private OrderStatus status;
-    private List<OrderEvent> eventList;
 
-    private OrderDao dao;
+    private List<OrderEvent> eventList = new ArrayList<>();
+
+    public Order() {
+    }
 
     public Order(Long orderId, OrderStatus status, List<OrderEvent> eventList) {
         this.orderId = orderId;
         this.status = status;
         this.eventList = eventList;
-    }
-
-    public void createEvent(Long clientId, Long employeeId, LocalTime expectedTime, Long productId,
-                            BigDecimal price, LocalDateTime dateTime) {
-
     }
 
     public Long getOrderId() {

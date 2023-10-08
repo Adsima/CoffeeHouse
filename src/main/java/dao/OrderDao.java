@@ -2,7 +2,6 @@ package dao;
 
 import exception.DaoException;
 import model.Order;
-import model.status.OrderStatus;
 
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -13,7 +12,7 @@ public class OrderDao {
 
     private OrderDao() {}
 
-    private static final String SAVE_ORDER = """
+    private static final String SAVE_ORDER_SQL = """
             INSERT INTO ch_orders (order_status, order_time)
             VALUES (?, ?);
             """;
@@ -21,7 +20,7 @@ public class OrderDao {
     public Order saveOrder(Order order) {
         try (var connection = ConnectionManager.getConnection();
         var prepareStatement = connection
-                .prepareStatement(SAVE_ORDER, Statement.RETURN_GENERATED_KEYS)) {
+                .prepareStatement(SAVE_ORDER_SQL, Statement.RETURN_GENERATED_KEYS)) {
 
             prepareStatement.setString(1, order.getStatus().toString());
             prepareStatement.setTimestamp(2, Timestamp.valueOf(LocalDateTime.now()));
@@ -43,6 +42,8 @@ public class OrderDao {
         }
     }
 
-    
+    public static OrderDao getInstance() {
+        return INSTANCE;
+    }
 
 }

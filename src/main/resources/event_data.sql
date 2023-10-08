@@ -8,7 +8,7 @@ CREATE TABLE ch_events (
     order_id BIGINT REFERENCES ch_orders (id),
     client_id BIGINT,
     employee_id BIGINT NOT NULL,
-    expected_time TIME,
+    expected_time TIMESTAMP,
     product_id BIGINT,
     price DECIMAL,
     reason VARCHAR(128),

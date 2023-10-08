@@ -2,7 +2,7 @@
 INSERT INTO ch_order (id, order_status, order_time)
 VALUES (?, ?, ?);
 
---Created event
+--Registered event
 INSERT INTO ch_events (id, client_id,
 employee_id, expected_time, product_id,
 price, date_time)
