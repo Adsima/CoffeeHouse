@@ -26,15 +26,15 @@ public class OrderStarter {
     }
 
     private void start() {
-        order = createOrder();
-        Order saveOrder = orderDao.saveOrder(order);
+        order = createOrder(1L);
 
-        orderService.addOrderToMap(saveOrder);
+
+
 
 
     }
 
-    private Order createOrder() {
-        return new Order();
+    private Order createOrder(Long id) {
+        return new Order(id);
     }
 }

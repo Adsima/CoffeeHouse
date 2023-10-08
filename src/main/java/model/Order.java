@@ -1,14 +1,11 @@
 package model;
 
-import dao.OrderDao;
 import model.event.OrderEvent;
 import model.status.OrderStatus;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Order {
 
@@ -17,13 +14,18 @@ public class Order {
 
     private List<OrderEvent> eventList = new ArrayList<>();
 
-    public Order() {
+    public Order(Long id) {
+        orderId = id;
     }
 
     public Order(Long orderId, OrderStatus status, List<OrderEvent> eventList) {
         this.orderId = orderId;
         this.status = status;
         this.eventList = eventList;
+    }
+
+    public void addEventToList(OrderEvent orderEvent) {
+        eventList.add(orderEvent);
     }
 
     public Long getOrderId() {
@@ -48,6 +50,19 @@ public class Order {
 
     public void setEventList(List<OrderEvent> eventList) {
         this.eventList = eventList;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Order)) return false;
+        Order order = (Order) o;
+        return Objects.equals(orderId, order.orderId) && status == order.status && Objects.equals(eventList, order.eventList);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(orderId, status, eventList);
     }
 
     @Override
