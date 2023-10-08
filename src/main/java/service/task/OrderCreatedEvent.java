@@ -9,6 +9,8 @@ import model.status.OrderStatus;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import static util.MessageConstants.NOT_REGISTERED_OR_CLOSED;
+
 public final class OrderCreatedEvent {
 
     public OrderCreatedEvent() {}
@@ -27,7 +29,7 @@ public final class OrderCreatedEvent {
             order.setStatus(OrderStatus.ORDER_CANCELLED);
             return new OrderCancelledEvent(order, employeeId, type, time, reason);
         }
-        throw new OrderException("Order error!");
+        throw new OrderException(NOT_REGISTERED_OR_CLOSED);
     }
 
     public OrderStartedEvent createStartedEvent(Order order, Long employeeId,
@@ -36,7 +38,7 @@ public final class OrderCreatedEvent {
             order.setStatus(OrderStatus.ORDER_STARTED);
             return new OrderStartedEvent(order, employeeId, type, time);
         }
-        throw new OrderException("Order error!");
+        throw new OrderException(NOT_REGISTERED_OR_CLOSED);
     }
 
     public OrderReadyEvent createReadyEvent(Order order, Long employeeId,
@@ -45,7 +47,7 @@ public final class OrderCreatedEvent {
             order.setStatus(OrderStatus.ORDER_READY);
             return new OrderReadyEvent(order, employeeId, type, time);
         }
-        throw new OrderException("Order error!");
+        throw new OrderException(NOT_REGISTERED_OR_CLOSED);
     }
 
     public OrderCompletedEvent createCompletedEvent(Order order, Long employeeId,
@@ -54,7 +56,7 @@ public final class OrderCreatedEvent {
             order.setStatus(OrderStatus.ORDER_COMPLETED);
             return new OrderCompletedEvent(order, employeeId, type, time);
         }
-        throw new OrderException("Order error!");
+        throw new OrderException(NOT_REGISTERED_OR_CLOSED);
     }
 
     private boolean validateRegistered(Order order) {

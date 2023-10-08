@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import static util.MessageConstants.RECURRING_EVENT;
+
 public class Order {
 
     private Long orderId;
@@ -25,7 +27,10 @@ public class Order {
     }
 
     public void addEventToList(OrderEvent orderEvent) {
-        eventList.add(orderEvent);
+        if (!eventList.contains(orderEvent)) {
+            eventList.add(orderEvent);
+        }
+        throw new IllegalArgumentException(RECURRING_EVENT);
     }
 
     public Long getOrderId() {
@@ -42,14 +47,6 @@ public class Order {
 
     public void setStatus(OrderStatus status) {
         this.status = status;
-    }
-
-    public List<OrderEvent> getEventList() {
-        return eventList;
-    }
-
-    public void setEventList(List<OrderEvent> eventList) {
-        this.eventList = eventList;
     }
 
     @Override
