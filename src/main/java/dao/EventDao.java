@@ -75,7 +75,7 @@ public class EventDao {
         }
     }
 
-    public void saveStartedEvent (OrderStartedEvent startedEvent) {
+    public void saveStartedEvent(OrderStartedEvent startedEvent) {
         try (var connection = ConnectionManager.getConnection();
              var prepareStatement = connection
                      .prepareStatement(STARTED_EVENT_SQL, Statement.RETURN_GENERATED_KEYS)) {

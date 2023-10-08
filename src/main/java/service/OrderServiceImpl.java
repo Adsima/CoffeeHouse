@@ -9,15 +9,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OrderServiceImpl implements OrderService {
-
     private Map<Long, Order> orderMap = new HashMap<>();
 
     public OrderServiceImpl() {
     }
-
-    // Список событий будем искать ч/з id - HashMap<Long, List<EventOrder> ordersMap...
-    private static final String FIND_ORDER = "...";
-
 
     @Override
     public void publishEvent(OrderEvent event) {
@@ -36,4 +31,7 @@ public class OrderServiceImpl implements OrderService {
         orderMap.put(order.getOrderId(), order);
     }
 
+    public Map<Long, Order> getOrderMap() {
+        return orderMap;
+    }
 }

@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d6b435-859a-4232-affe-4c8b6cc37fcf" name="Changes" comment="Create EventTask">
+    <list default="true" id="b5d6b435-859a-4232-affe-4c8b6cc37fcf" name="Changes" comment="Added a connection pool to store 5 connection threads.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DemoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DemoApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OrderStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrderStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ConnectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/EventDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/task/EventTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/task/OrderCreatedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/event_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/event_data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/EventDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/EventDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/task/OrderCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/task/OrderCreatedEvent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696768889455</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added a connection pool to store 5 connection threads.">
+      <created>1696773694247</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696773694247</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,7 +132,8 @@
     <MESSAGE value="Create OrderDao and utils classes" />
     <MESSAGE value="Create EventDao" />
     <MESSAGE value="Create EventTask" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create EventTask" />
+    <MESSAGE value="Added a connection pool to store 5 connection threads." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a connection pool to store 5 connection threads." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
