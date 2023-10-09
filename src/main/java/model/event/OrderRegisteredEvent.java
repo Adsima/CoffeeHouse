@@ -25,32 +25,16 @@ public class OrderRegisteredEvent extends OrderEvent {
         return clientId;
     }
 
-    public void setClientId(Long clientId) {
-        this.clientId = clientId;
-    }
-
     public LocalDateTime getExecutedTime() {
         return executedTime;
-    }
-
-    public void setExecutedTime(LocalDateTime executedTime) {
-        this.executedTime = executedTime;
     }
 
     public Long getProductId() {
         return productId;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
-    }
-
     public BigDecimal getProductCost() {
         return productCost;
-    }
-
-    public void setProductCost(BigDecimal productCost) {
-        this.productCost = productCost;
     }
 
     @Override

@@ -2,6 +2,7 @@ package model.event;
 
 import model.Order;
 import model.status.EventType;
+
 import java.time.LocalDateTime;
 
 public class OrderCancelledEvent extends OrderEvent {
@@ -14,10 +15,6 @@ public class OrderCancelledEvent extends OrderEvent {
 
     public String getReason() {
         return reason;
-    }
-
-    public void setReason(String reason) {
-        this.reason = reason;
     }
 
     @Override

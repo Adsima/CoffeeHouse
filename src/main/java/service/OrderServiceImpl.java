@@ -1,5 +1,6 @@
 package service;
 
+import dao.ConnectionManager;
 import dao.EventDao;
 import model.Order;
 import model.event.*;
@@ -9,6 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OrderServiceImpl implements OrderService {
+
+    // Хранит все заказы по id
     private Map<Long, Order> orderMap;
     private EventDao eventDao;
 
@@ -37,12 +40,11 @@ public class OrderServiceImpl implements OrderService {
                 break;
         }
         event.getOrder().addEventToList(event);
-        System.out.println(event);
     }
 
     @Override
     public Order findOrder(int id) {
-        if (orderMap.containsKey(id)) {
+        if (!orderMap.containsKey(id)) {
             throw new IllegalArgumentException(MessageConstants.ORDER_NOT_FOUND);
         }
         return orderMap.get(id);
@@ -54,5 +56,9 @@ public class OrderServiceImpl implements OrderService {
 
     public Map<Long, Order> getOrderMap() {
         return orderMap;
+    }
+
+    public void serviceFinish() {
+        ConnectionManager.closePoll();
     }
 }

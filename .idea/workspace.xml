@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d6b435-859a-4232-affe-4c8b6cc37fcf" name="Changes" comment="Create method 'OrderServiceImpl.publishEvent'">
+    <list default="true" id="b5d6b435-859a-4232-affe-4c8b6cc37fcf" name="Changes" comment="corrected class 'OrderServiceImpl'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DemoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DemoApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DemoApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OrderStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrderStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/OrderDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exception/DaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exception/DaoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exception/PropertiesException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exception/PropertiesException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderCancelledEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderCancelledEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderRegisteredEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderRegisteredEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/task/OrderCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/task/OrderCreatedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/MessageConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/MessageConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DemoApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DemoApp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696839283715</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="corrected class 'OrderServiceImpl'">
+      <created>1696840554557</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696840554557</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,18 +187,8 @@
     <MESSAGE value="Created class EventService" />
     <MESSAGE value="Corrected the OrderCreatedEvent class." />
     <MESSAGE value="Create method 'OrderServiceImpl.publishEvent'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create method 'OrderServiceImpl.publishEvent'" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DemoApp.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="corrected class 'OrderServiceImpl'" />
+    <option name="LAST_COMMIT_MESSAGE" value="corrected class 'OrderServiceImpl'" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
