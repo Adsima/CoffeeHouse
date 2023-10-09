@@ -37,6 +37,7 @@ public class OrderServiceImpl implements OrderService {
                 break;
         }
         event.getOrder().addEventToList(event);
+        System.out.println(event);
     }
 
     @Override

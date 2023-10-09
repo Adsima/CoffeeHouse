@@ -1,7 +1,6 @@
 CREATE DATABASE IF NOT EXISTS coffee_house;
 
 DROP TABLE IF EXISTS ch_events;
-DROP TABLE IF EXISTS ch_orders;
 
 CREATE TABLE ch_events (
     id BIGSERIAL PRIMARY KEY,
@@ -16,9 +15,4 @@ CREATE TABLE ch_events (
     date_time TIMESTAMP NOT NULL
 );
 
-CREATE TABLE ch_orders (
-    id BIGSERIAL PRIMARY KEY,
-    order_status VARCHAR(50) NOT NULL,
-    order_time TIMESTAMP NOT NULL
-);
 

@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d6b435-859a-4232-affe-4c8b6cc37fcf" name="Changes" comment="Corrected the OrderCreatedEvent class.">
+    <list default="true" id="b5d6b435-859a-4232-affe-4c8b6cc37fcf" name="Changes" comment="Create method 'OrderServiceImpl.publishEvent'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DemoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DemoApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OrderStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrderStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderCancelledEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderCancelledEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderCompletedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderCompletedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderReadyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderReadyEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderRegisteredEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderRegisteredEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/event/OrderStartedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/event/OrderStartedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/EventService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/task/OrderCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/task/OrderCreatedEvent.java" afterDir="false" />
     </list>
@@ -145,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696784376932</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Create method 'OrderServiceImpl.publishEvent'">
+      <created>1696839283715</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696839283715</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,15 +169,16 @@
     <MESSAGE value="Corrected for class OrderCreatedEvent" />
     <MESSAGE value="Created class EventService" />
     <MESSAGE value="Corrected the OrderCreatedEvent class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected the OrderCreatedEvent class." />
+    <MESSAGE value="Create method 'OrderServiceImpl.publishEvent'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create method 'OrderServiceImpl.publishEvent'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/OrderStarter.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main/java/DemoApp.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
