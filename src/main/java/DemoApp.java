@@ -10,7 +10,7 @@ public class DemoApp {
 
         Order order = new Order(1L, OrderStatus.ORDER_REGISTERED, new ArrayList<>());
 
-        eventTask.createCancelledEvent(order);
+
 
     }
 }

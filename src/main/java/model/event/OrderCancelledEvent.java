@@ -24,6 +24,6 @@ public class OrderCancelledEvent extends OrderEvent {
     public String toString() {
         return "OrderCancelledEvent{" +
                 "reason='" + reason + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }

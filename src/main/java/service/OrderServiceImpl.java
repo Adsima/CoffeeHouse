@@ -1,22 +1,42 @@
 package service;
 
+import dao.EventDao;
 import model.Order;
-import model.event.OrderEvent;
+import model.event.*;
 import util.MessageConstants;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class OrderServiceImpl implements OrderService {
-    private Map<Long, Order> orderMap = new HashMap<>();
+    private Map<Long, Order> orderMap;
+    private EventDao eventDao;
 
-    public OrderServiceImpl() {}
+    public OrderServiceImpl() {
+        orderMap = new HashMap<>();
+        eventDao = new EventDao();
+    }
 
     @Override
     public void publishEvent(OrderEvent event) {
-        for (Long aLong : orderMap.keySet()) {
-            
+        switch (event.getType()) {
+            case REGISTERED:
+                eventDao.saveRegisteredEvent((OrderRegisteredEvent) event);
+                break;
+            case CANCELLED:
+                eventDao.saveCancelledEvent((OrderCancelledEvent) event);
+                break;
+            case STARTED:
+                eventDao.saveStartedEvent((OrderStartedEvent) event);
+                break;
+            case READY:
+                eventDao.saveReadyEvent((OrderReadyEvent) event);
+                break;
+            case COMPLETED:
+                eventDao.saveCompletedEvent((OrderCompletedEvent) event);
+                break;
         }
+        event.getOrder().addEventToList(event);
     }
 
     @Override

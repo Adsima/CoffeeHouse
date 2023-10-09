@@ -60,6 +60,6 @@ public class OrderRegisteredEvent extends OrderEvent {
                 ", executedTime=" + executedTime +
                 ", productId=" + productId +
                 ", productCost=" + productCost +
-                '}';
+                "} " + super.toString();
     }
 }
